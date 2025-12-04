@@ -1,0 +1,6 @@
+# node main.js -h 127.0.0.1 -p 3000 -c ./cache
+curl -v http://127.0.0.1:3000/200 --output 200.jpeg
+curl -v http://127.0.0.1:3000/200 --output 200-cache.jpeg
+curl -v -X PUT --data-binary "@200.jpeg" http://127.0.0.1:3000/200
+curl -v -X DELETE http://127.0.0.1:3000/200
+curl -v -X POST http://127.0.0.1:3000/200
